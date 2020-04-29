@@ -264,7 +264,8 @@ df["bore"].replace(np.nan, avg_bore, inplace=True)
 # </div>
 
 # In[61]:
-
+avg_stroke = df["stroke"].astype("float").mean(axis = 0)
+print("Average of stroke:", avg_stroke)
 
 # Write your code below and press Shift+Enter to execute 
 df["stroke"].replace(np.nan, avg_stroke, inplace=True)
@@ -543,7 +544,7 @@ df["horsepower"]=df["horsepower"].astype(int, copy=True)
 # In[105]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib as plt
 from matplotlib import pyplot
 plt.pyplot.hist(df["horsepower"])
@@ -598,7 +599,7 @@ df["horsepower-binned"].value_counts()
 # In[110]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib as plt
 from matplotlib import pyplot
 pyplot.bar(group_names, df["horsepower-binned"].value_counts())
@@ -622,7 +623,7 @@ plt.pyplot.title("horsepower bins")
 # In[111]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 import matplotlib as plt
 from matplotlib import pyplot
 
@@ -678,7 +679,7 @@ dummy_variable_1.head()
 # In[114]:
 
 
-dummy_variable_1.rename(columns={'fuel-type-diesel':'gas', 'fuel-type-diesel':'diesel'}, inplace=True)
+dummy_variable_1.rename(columns={'fuel-type':'gas', 'fuel-type-diesel':'diesel'}, inplace=True)
 dummy_variable_1.head()
 
 
