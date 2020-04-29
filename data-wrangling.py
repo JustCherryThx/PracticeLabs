@@ -267,8 +267,7 @@ df["bore"].replace(np.nan, avg_bore, inplace=True)
 
 
 # Write your code below and press Shift+Enter to execute 
-df["stroke"].replace(np.nan, avg_stroke, inplace=True)
-print("Average of stroke:", avg_stroke)
+
 
 
 # Double-click <b>here</b> for the solution.
